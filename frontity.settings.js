@@ -2,36 +2,30 @@ const settings = {
   name: "jejak",
   state: {
     frontity: {
-      url: "https://jejakonline.com",
+      url: "https://test.frontity.org",
       title: "jejakonline",
       description: "kepemimpinan, teknologi dan qalbu ihsani",
     },
   },
   packages: [
     {
-      name: "@frontity/mars-theme",
-      state: {
-        theme: {
-          menu: [
-            ["News", "/c/news/"],
-            ["Lifestyle", "/c/lifestyle/"],
-            ["Editorial", "/c/editorial/"],
-            ["Figur", "/c/figur/"],
-            ["Komunitas", "/c/komunitas/"],
-          ],
-          featured: {
-            showOnList: true,
-            showOnPost: false,
-          },
-        },
-      },
+      name: "jjo-theme"
     },
     {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://jejakonline.com",
-          categoryBase: "c",
+          url: "https://test.frontity.org",
+          postTypes: [
+            {
+              type: "destinations",
+              endpoint: "destinations",
+              archive: "/destinations"
+            }
+          ]
+          // categoryBase: "c",
+          // tagBase: "topic",
+
         },
       },
     },
