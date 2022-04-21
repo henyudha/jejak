@@ -34,7 +34,7 @@ const Root = ({ state, actions }) => {
       />
       <Header isPostType={data.isPostType} isPage={data.isPage}>
         <HeaderContent>
-          <h1>Hello Frontity</h1>
+          <h1>jejakonline</h1>
           {state.theme.isUrlVisible ? (
             <>
               Current URL: {state.router.link}{" "}
@@ -46,7 +46,7 @@ const Root = ({ state, actions }) => {
           <Menu>
             <Link link="/">Home</Link>
             <Link link="/destinations">Destinations</Link>
-            <Link link="/about-us">About Us</Link>
+            <Link link="/tentang">About Us</Link>
           </Menu>
         </HeaderContent>
       </Header>

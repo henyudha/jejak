@@ -2,7 +2,7 @@ const settings = {
   name: "jejak",
   state: {
     frontity: {
-      url: "https://test.frontity.org",
+      url: "https://cms.jejakonline.com",
       title: "jejakonline",
       description: "kepemimpinan, teknologi dan qalbu ihsani",
     },
@@ -15,7 +15,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://test.frontity.org",
+          url: "https://cms.jejakonline.com",
           postTypes: [
             {
               type: "destinations",
