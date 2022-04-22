@@ -19,7 +19,7 @@ const List = ({ state }) => {
       {/* If the list is for a specific author, we render a title. */}
       {data.isAuthor && (
         <Header>
-          Editor: <b>{decode(state.source.author[data.id].name)}</b>
+          Author: <b>{decode(state.source.author[data.id].name)}</b>
         </Header>
       )}
 
@@ -37,7 +37,7 @@ const List = ({ state }) => {
 export default connect(List);
 
 const Container = styled.section`
-  width: 620px;
+  width: 800px;
   margin: 0;
   padding: 24px;
   list-style: none;

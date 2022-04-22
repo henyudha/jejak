@@ -32,9 +32,6 @@ const Post = ({ state, actions, libraries }) => {
   const author = state.source.author[post.author];
   // Get a human readable date.
   const date = new Date(post.date);
-  // Menampilkan tags
-  const tag = state.source.tag[post.tags];
-  // const tag = state.source[data.tag][data.id].tag.rendered;
 
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
@@ -61,7 +58,7 @@ const Post = ({ state, actions, libraries }) => {
             {author && (
               <StyledLink link={author.link}>
                 <Author>
-                  editor: <b>{author.name}</b>
+                  By <b>{author.name}</b>
                 </Author>
               </StyledLink>
             )}
@@ -88,12 +85,6 @@ const Post = ({ state, actions, libraries }) => {
         // libraries.html2react.processors array.
         <Content>
           <Html2React html={post.content.rendered} />
-
-          {/* Menampilkan Tags */}
-          <Tag>topic: <StyledLink link={tag.link}>
-              <b dangerouslySetInnerHTML={{ __html: tag.name }} />
-            </StyledLink>
-          </Tag>
         </Content>
       )}
     </Container>
@@ -103,7 +94,7 @@ const Post = ({ state, actions, libraries }) => {
 export default connect(Post);
 
 const Container = styled.div`
-  width: 620px;
+  width: 800px;
   margin: 0;
   padding: 24px;
 `;
@@ -131,16 +122,6 @@ const DateWrapper = styled.p`
   display: inline;
 `;
 
-const Tag = styled.div`
-  color: rgba(12, 17, 43, 0.9);
-  margin-bottom: 30px;
-  font-size: 0.9em;
-  & > a {
-    text-decoration: none!important;
-    color: inherit;
-  }
-`;
-
 /**
  * This component is the parent of the `content.rendered` HTML. We can use nested
  * selectors to style that HTML.
@@ -155,18 +136,7 @@ const Content = styled.div`
 
   p {
     line-height: 1.6em;
-    font-size: 1.15rem;
   }
-  h1,h2,h3,h4,h5 {
-    margin-bottom: 0.5rem;
-    font-weight:500;
-    line-height:1.2;
-  }
-  h1 {font-size: 2.5rem;}
-  h2 {font-size: 2rem;}
-  h3 {font-size: 1.75rem;}
-  h4 {font-size: 1.5rem;}
-  h5 {font-size: 1.3rem;}
 
   img {
     width: 100%;
@@ -275,5 +245,3 @@ const Content = styled.div`
     }
   }
 `;
-
-

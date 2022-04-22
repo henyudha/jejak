@@ -25,7 +25,7 @@ const Item = ({ state, item }) => {
         {author && (
           <StyledLink link={author.link}>
             <AuthorName>
-              editor: <b>{author.name}</b>
+              By <b>{author.name}</b>
             </AuthorName>
           </StyledLink>
         )}
