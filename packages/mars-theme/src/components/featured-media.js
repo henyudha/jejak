@@ -45,13 +45,15 @@ export default connect(FeaturedMedia);
 
 const Container = styled.div`
   margin-top: 16px;
-  height: 300px;
+  height: auto;
   ${({ isAmp }) => isAmp && "position: relative;"};
 `;
 
 const StyledImage = styled(Image)`
   display: block;
-  height: 100%;
+  height: auto;
   width: 100%;
   object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
 `;

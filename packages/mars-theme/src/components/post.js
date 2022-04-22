@@ -49,18 +49,24 @@ const Post = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <Container>
-      <div>
+      <div className="post-title">
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
         {/* Hide author and date on pages */}
         {!data.isPage && (
           <div>
             {author && (
+              // <StyledLink link={author.link}>
+              //   <Author>
+              //     editor: <b>{author.name}</b>
+              //   </Author>
+              // </StyledLink>
+              <Author>
+              editor:{" "}
               <StyledLink link={author.link}>
-                <Author>
-                  By <b>{author.name}</b>
-                </Author>
+                <b>{author.name}</b>
               </StyledLink>
+            </Author>
             )}
             <DateWrapper>
               {" "}
@@ -94,7 +100,7 @@ const Post = ({ state, actions, libraries }) => {
 export default connect(Post);
 
 const Container = styled.div`
-  width: 800px;
+  width: 640px;
   margin: 0;
   padding: 24px;
 `;
@@ -142,6 +148,7 @@ const Content = styled.div`
     width: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 6px;
   }
 
   figure {
@@ -156,6 +163,7 @@ const Content = styled.div`
   iframe {
     display: block;
     margin: auto;
+    border-radius: 6px;
   }
 
   blockquote {

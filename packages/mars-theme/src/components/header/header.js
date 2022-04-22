@@ -1,5 +1,5 @@
 import { connect, styled } from "frontity";
-import Link from "./link";
+import Link from "../link";
 import Nav from "./nav";
 import MobileMenu from "./menu";
 
@@ -34,7 +34,7 @@ const Container = styled.div`
 
 const Title = styled.h2`
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 `;
 
 const Description = styled.h4`

@@ -23,11 +23,17 @@ const Item = ({ state, item }) => {
       <div>
         {/* If the post has an author, we render a clickable author text. */}
         {author && (
-          <StyledLink link={author.link}>
-            <AuthorName>
-              By <b>{author.name}</b>
-            </AuthorName>
-          </StyledLink>
+          // <StyledLink link={author.link}>
+          //   <AuthorName>
+          //     editor: <b>{author.name}</b> 
+          //   </AuthorName>
+          // </StyledLink>
+          <AuthorName>
+            editor:{" "}
+            <StyledLink link={author.link}>
+              <b>{author.name}</b>
+            </StyledLink>
+          </AuthorName>
         )}
         <PublishDate>
           {" "}

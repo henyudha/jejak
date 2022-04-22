@@ -1,57 +1,46 @@
 const settings = {
-  "name": "jejak",
-  "state": {
-    "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
-    }
+  name: "jejak",
+  state: {
+    frontity: {
+      url: "https://cms.jejakonline.com",
+      title: "jejakonline",
+      description: "kepemimpinan, teknologi dan qalbu ihsani",
+    },
   },
-  "packages": [
+  packages: [
     {
-      "name": "@frontity/mars-theme",
-      "state": {
-        "theme": {
-          "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+      name: "@frontity/mars-theme",
+      state: {
+        theme: {
+          menu: [
+            ["home", "/"],
+            ["news", "/c/news/"],
+            ["lifestyle", "/c/lifestyle/"],
+            ["editorial", "/c/editorial/"],
+            ["figur", "/c/figur/"],
+            ["komunitas", "/c/komunitas/"],
+            ["tentang", "/tentang/"],
           ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+          featured: {
+            showOnList: true,
+            showOnPost: true,
+          },
+        },
+      },
     },
     {
-      "name": "@frontity/wp-source",
-      "state": {
-        "source": {
-          "url": "https://test.frontity.org"
-        }
-      }
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          url: "https://cms.jejakonline.com",
+          categoryBase: "c",
+          tagBase: "topic",
+        },
+      },
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
-  ]
+    "@frontity/html2react",
+  ],
 };
 
 export default settings;
