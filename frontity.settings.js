@@ -13,7 +13,6 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["home", "/"],
             ["news", "/c/news/"],
             ["lifestyle", "/c/lifestyle/"],
             ["editorial", "/c/editorial/"],

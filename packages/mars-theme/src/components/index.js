@@ -7,7 +7,6 @@ import Loading from "./loading";
 import Title from "./title";
 import Page from "./pages/page";
 import PageError from "./page-error";
-import EksternalCss from "./assets/uikit.min.css";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -32,7 +31,6 @@ const Theme = ({ state }) => {
 
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
-      <Global styles={css(EksternalCss)} />
       <Global styles={globalStyles} />
 
       {/* Add the header of the site. */}
@@ -76,15 +74,29 @@ const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
+  width:100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  // background-color: #1f38c5;
+  // padding: 20px 0 20px 45px;
+
+  @media screen and (max-width: 560px) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 const Main = styled.div`
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
+  // background-image: linear-gradient(
+  //   180deg,
+  //   rgba(66, 174, 228, 0.1),
+  //   rgba(66, 174, 228, 0)
+  // );
+
+  @media screen and (max-width: 560px) {
+    display: flex;
+    flex-direction: row;
+  }
 `;

@@ -141,7 +141,7 @@ const Content = styled.div`
   }
 
   p {
-    line-height: 1.6em;
+    line-height: 1.5em;
   }
 
   img {
