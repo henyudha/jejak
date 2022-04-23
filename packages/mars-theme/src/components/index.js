@@ -68,6 +68,17 @@ const globalStyles = css`
     color: inherit;
     text-decoration: none;
   }
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+  }
+  h1 {font-size: 40px; line-height: 47px; style: normal;}
+  h2 {font-size: 32px; line-height: 37px; style: normal;}
+  h3 {font-size: 28px; line-height: 34px; style: normal;}
+  h4 {font-size: 24px; line-height: 29px; style: normal;}
+  h5 {font-size: 20px; line-height: 24px; style: normal;}
+  h6 {font-size: 16px; line-height: 19px; style: normal;}
+  
+  
 `;
 
 const HeadContainer = styled.div`
