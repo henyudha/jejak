@@ -13,11 +13,11 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["news", "/c/news/"],
-            ["lifestyle", "/c/lifestyle/"],
-            ["editorial", "/c/editorial/"],
-            ["figur", "/c/figur/"],
-            ["komunitas", "/c/komunitas/"],
+            ["news", "/category/news/"],
+            ["lifestyle", "/category/lifestyle/"],
+            ["editorial", "/category/editorial/"],
+            ["figur", "/category/figur/"],
+            ["komunitas", "/category/komunitas/"],
             ["tentang", "/tentang/"],
           ],
           featured: {
@@ -34,8 +34,8 @@ const settings = {
           url: "https://cms.jejakonline.com/",
           // homepage: "/my-page",
           // postsPage: "/blog",
-          categoryBase: "c",
-          tagBase: "topic",
+          // categoryBase: "c",
+          // tagBase: "topic",
         },
       },
     },
