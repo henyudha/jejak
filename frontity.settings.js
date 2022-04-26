@@ -18,7 +18,6 @@ const settings = {
             ["editorial", "/category/editorial/"],
             ["figur", "/category/figur/"],
             ["komunitas", "/category/komunitas/"],
-            ["tentang", "/tentang/"],
           ],
           featured: {
             showOnList: true,
@@ -32,8 +31,8 @@ const settings = {
       state: {
         source: {
           url: "https://cms.jejakonline.com/",
-          // homepage: "/my-page",
-          // postsPage: "/blog",
+          postsPage: "/blog",
+          homepage: "/home",
           // categoryBase: "c",
           // tagBase: "topic",
         },

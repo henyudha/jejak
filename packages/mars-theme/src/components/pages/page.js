@@ -7,7 +7,7 @@ const Page = ({ state }) => {
 
   return (
     <div>
-      <h2>{page.title.rendered}</h2>
+      {/* <h2>{page.title.rendered}</h2> */}
       <div dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
     </div>
   )

@@ -49,12 +49,12 @@ const Post = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <Container>
-      <div className="post-title">
-        <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+      <div>
 
         {/* Hide author and date on pages */}
         {!data.isPage && (
           <div>
+            <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
             {author && (
               // <StyledLink link={author.link}>
               //   <Author>
@@ -141,7 +141,7 @@ const Content = styled.div`
   }
 
   p {
-    line-height: 1.5em;
+    line-height: 1.55em;
   }
 
   img {

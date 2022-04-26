@@ -35,6 +35,15 @@ const NavContainer = styled.nav`
   padding: 0 24px;
   margin: 0;
   overflow-x: auto;
+  // height: 100%;
+  // width: 170px;
+  // position: fixed;
+  // z-index: 1;
+  // top: 0;
+  // left: 0;
+  // background: #eaeaea;
+  // overflow-x: hidden;
+  // padding-top: 20px;
 
   @media screen and (max-width: 560px) {
     display: none;
